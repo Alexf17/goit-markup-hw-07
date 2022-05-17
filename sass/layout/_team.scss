@@ -1,0 +1,85 @@
+.team {
+    background-color: #f5f4fa;
+}
+
+.team__list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.team__item {
+    width: calc(100% - 90px) / 4;
+    margin-right: 30px;
+    text-align: center;
+    background: #ffffff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+}
+
+.team__item:nth-child(4) {
+    margin-right: 0px;
+}
+
+.card__title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    color: var(--main-title-color);
+    margin-bottom: 10px;
+}
+
+.card__text {
+    font-size: 16px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    color: var(--main-text-color);
+    margin-bottom: 16px;
+}
+
+.card {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    &__list {
+            display: flex;
+            justify-content: center;
+        }
+    &__icon {
+        fill: #AFB1B8;
+    }
+}
+
+.card__link {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--header-color);
+
+    transition: background-color var(--timing-duration);
+
+    &:hover,
+    &:focus,
+    &:active {
+            background-color: var(--accent-color);
+        }
+    &:hover .card__icon,
+    &:focus .card__icon,
+    &:active .card__icon {
+        fill: #FFFFFF;
+    }
+}
+
+
+.card__item+.card__item {
+    margin-left: 10px;
+}
+
+
+
+
