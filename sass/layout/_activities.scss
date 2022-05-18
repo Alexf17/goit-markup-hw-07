@@ -1,5 +1,6 @@
 .activities {
-    padding-top: 0;
+    display: flex;
+    justify-content: space-between;
 }
 
 .activities__card-text {
@@ -26,7 +27,3 @@
     position: relative;
 }
 
-.activities__list {
-    display: flex;
-    justify-content: space-between;
-}

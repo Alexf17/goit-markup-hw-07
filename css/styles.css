@@ -47,6 +47,13 @@ body {
     padding-bottom: 94px;
 }
 
+.section--no-padding-top {
+    padding-top: 0;
+}
+
+.section--other-background {
+    background-color: #f5f4fa;
+}
 
 .visually-hidden {
     position: absolute;
@@ -266,17 +273,17 @@ body {
 
 /*----------Features-------*/
 
-.features-section__list {
+.features__list {
     display: flex;
     align-content: flex-start;
 }
-.features-section__item {
+.features__item {
     width: 270px;
 }
-.features-section__list .features-section__item+.features-section__item {
+.features__list .features__item+.features__item {
     margin-left: 30px;
 }
-.features-section__title {
+.features__title {
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -286,7 +293,7 @@ body {
     margin-top: 0px;
     margin-bottom: 10px;
 }
-.features-section__text {
+.features__text {
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
@@ -294,7 +301,7 @@ body {
     margin-top: 0px;
     margin-bottom: 0px;
 }
-.features-section__icon  {
+.features__box  {
     display: flex;
     margin-bottom: 30px;
     height: 120px;
@@ -302,16 +309,14 @@ body {
     justify-content: center;
     align-items: center;
 }
-.features-section__svg {
+.features__svg {
     width: 70px;
     height: 70px;
     padding: 0;
     margin: 0;
 }
 /*----------activities-------*/
-.activities {
-    padding-top: 0;
-}
+
 
 .activities__card-text {
     position: absolute;
@@ -337,7 +342,7 @@ body {
     position: relative;
 }
 
-.activities__list {
+.activities {
     display: flex;
     justify-content: space-between;
 }
@@ -345,26 +350,26 @@ body {
 /*----------Team-------*/
 
 .team {
-    background-color: #f5f4fa;
-}
-.team__list {
     display: flex;
     flex-wrap: wrap;
 }
+
 .team__item {
-    width: calc(100%-90px) / 4;
+    width: calc(100% - 90px) / 4;
     margin-right: 30px;
     text-align: center;
     background: #ffffff;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
-    0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+        0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 }
+
 .team__item:nth-child(4) {
     margin-right: 0px;
 }
-.card__title {
+
+.team__title {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
@@ -372,48 +377,59 @@ body {
     color: var(--main-title-color);
     margin-bottom: 10px;
 }
-.card__text {
+
+.team__text {
     font-size: 16px;
     line-height: 1.19;
     letter-spacing: 0.03em;
     color: var(--main-text-color);
     margin-bottom: 16px;
 }
-.card {
-  padding-top: 30px;
-  padding-bottom: 30px;
+
+
+.team__card {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
 }
-.card__link {
+
+
+.social {
+    display: flex;
+    justify-content: center;
+}
+
+.social__icon {
+    fill: #AFB1B8;
+}
+
+.social__link {
     display: flex;
     width: 44px;
     height: 44px;
     border-radius: 50%;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     background-color: var(--header-color);
 
     transition: background-color var(--timing-duration);
+  
 }
 
-.card__list {
-    display: flex;
-    justify-content: center;
-}
-.card__item+.card__item {
-    margin-left: 10px;
-}
-.card__icon {
-    fill: #AFB1B8;
-}
-.card__link:hover,
-.card__link:focus,
-.card__link:active {
-    background-color:var(--accent-color);
-}
-.card__link:hover .card__icon,
-.card__link:focus .card__icon,
-.card__link:active .card__icon {
+ .social__link:hover,
+ .social__link:focus,
+ .social__link:active {
+     background-color: var(--accent-color);
+ }
+
+.social__link:hover .social__icon,
+.social__link:focus .social__icon,
+.social__link:active .social__icon {
     fill: #FFFFFF;
+}
+
+.social__item+.social__item {
+    margin-left: 10px;
 }
 
 /*-------Client-----------*/
@@ -620,10 +636,6 @@ body {
     margin-left: 10px;
 }
 /*----------Filter-------*/
-.filters {
-    padding-top: 94px;
-    padding-bottom: 94px;
-}
 
 .filters-list {
     display: flex;
@@ -631,28 +643,33 @@ body {
     margin-bottom: 50px;
 }
 
-.filters-list .item:not(:last-child) {
+.filters-list-item:not(:last-child) {
     margin-right: 8px;
 }
 
+
 /*----------Filter result-------*/
-.example-list {
+
+.card-list {
     display: flex;
     flex-wrap: wrap;
 }
-.example-list .example-link:hover,
-.example-list .example-link:focus {
+
+.card-list .card-list__link:hover,
+.card-list .card-list__link:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
-    0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
+        0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
 }
-.example-item {
+
+.card-list__item {
     width: calc((100% - 60px) / 3);
     margin-right: 30px;
     margin-bottom: 30px;
     background: #ffffff;
 }
-.example-title {
+
+.card-box__title {
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
@@ -660,34 +677,39 @@ body {
     color: var(--main-title-color);
     margin-bottom: 4px;
 }
-.example-text {
+
+.card-box__text {
     font-size: 16px;
     line-height: 1.88;
     letter-spacing: 0.03em;
     color: var(--main-text-color);
 }
-.example-item:nth-child(3n) {
+
+.card-list__item:nth-child(3n) {
     margin-right: 0px;
 }
 
-.example-item:nth-last-child(-n + 3) {
+.card-list__item:nth-last-child(-n + 3) {
     margin-bottom: 0px;
 }
-.example-link {
+
+.card-list__link {
     text-decoration: none;
     display: block;
     transition: box-shadow var(--timing-duration);
 }
 
-.example-card {
+.card-box {
     padding: 20px 24px;
     border: 1px solid #eeeeee;
 }
-.example-card-overlay {
+
+.card-list__overlay {
     position: relative;
     overflow: hidden;
 }
-.example-text-overlay {
+
+.card-box__text-overlay {
     position: absolute;
     content: "";
     top: 0;
@@ -703,12 +725,14 @@ body {
     transform: translateY(100%);
     transition: transform var(--timing-duration);
 }
-.example-link:hover .example-text-overlay,
-.example-link:focus .example-text-overlay {
+
+
+.card-list__link:hover .card-box__text-overlay,
+.card-list__link:focus .card-box__text-overlay {
     transform: translateY(0);
 }
 
-.example-text-overlay {
+.card-box__text-overlay {
     font-size: 18px;
     line-height: 1.5;
     color: var(--header-color);
